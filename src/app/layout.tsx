@@ -15,14 +15,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL || "https://nusavilla21.netlify.app",
+  ),
+
+  verification: {
+    google: "WvlH9-vt82WwaarA1UQ_uNUE5gM0SuS8D-PjtkhqvHk",
+  },
+
   icons: {
     icon: [
-      { url: '/favicon.jpg', type: 'image/jpeg' },
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: "/favicon.jpg", type: "image/jpeg" },
+      { url: "/favicon.ico", type: "image/x-icon" },
     ],
-    shortcut: '/favicon.jpg',
-    apple: '/apple-icon.jpg',
+    shortcut: "/favicon.jpg",
+    apple: "/apple-icon.jpg",
   },
   title: "NUSA VILLA — Luxury Private Villas & Tropical Escapes in Bali",
   description:
@@ -74,7 +81,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} h-full scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${playfair.variable} ${inter.variable} h-full scroll-smooth`}
+    >
       <body className="min-h-full flex flex-col font-sans bg-[#FAF9F6] text-[#111827] antialiased">
         {children}
       </body>
